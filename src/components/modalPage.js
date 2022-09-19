@@ -1,6 +1,7 @@
 import Sent from '../interactive-rating-component-main/images/illustration-thank-you.svg'
+// import  from './ratingBtn';
 
-function ModalPage(){
+function ModalPage({onClick}){
     return (
       <section className='modal-page'>
         <img src={Sent} alt="sent" />

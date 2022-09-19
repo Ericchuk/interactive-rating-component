@@ -1,6 +1,5 @@
 import LandingPage from '../src/components/landingPage';
 import './App.css';
-
 function App() {
   
   return (
@@ -9,5 +8,9 @@ function App() {
     </article>
   );
 }
+
+// function show(){
+//   setNumber(e.target.textContent);
+// }
 
 export default App;

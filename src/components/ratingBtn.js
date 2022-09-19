@@ -1,17 +1,15 @@
-import {useState} from 'react';
+import {useState} from "react"
 
-function RatingBtn(onClick) {
-  const [number, setNumber] = useState(["1", "2", "3", "4", "5"]);
+//SELECT VALUE
 
-  //SELECT VALUE
-  const select = (e) => {
-   
-    setNumber(e)
-    console.log(setNumber);
-  };
+
+function RatingBtn({ onClick }) {
+  const number = ["1", "2", "3", "4", "5"];
+  let [numbers, setNumber] = useState(0)
+
   const numberList = number.map((each) => {
     return (
-      <span onClick={select} key={each}>
+      <span onClick={onClick} key={each}>
         {each}
       </span>
     );
@@ -19,4 +17,4 @@ function RatingBtn(onClick) {
   return <aside>{numberList}</aside>;
 }
 
-export default RatingBtn;
+export { RatingBtn };

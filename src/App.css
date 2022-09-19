@@ -37,9 +37,9 @@ article section {
 }
 
 article .modal-page {
-  display: none;
+  /* display: none; */
   position: absolute;
-  top:0;
+  top:400px;
   justify-content: center;
   align-items: center;
   text-align: center;
