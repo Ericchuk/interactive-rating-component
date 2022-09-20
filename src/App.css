@@ -39,7 +39,7 @@ article section {
 article .modal-page {
   /* display: none; */
   position: absolute;
-  top:400px;
+  top:0px;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -82,7 +82,7 @@ article section aside{
   align-items: center;
   justify-content: space-between;
 }
-article section aside span{
+article section aside .span{
   display: block;
   background-color: var(--Dark-Blue);
   padding:10px 16px;
@@ -91,13 +91,16 @@ article section aside span{
   box-shadow:0px 2px 5px 1px var(--Very-Dark-Blue);
   transition: background-color .75s cubic-bezier(0, 0, 0.108, 1.0);
   cursor: pointer;
+  color:var(--White);
+  border:none;
 }
 
-article section aside span:hover{
+article section aside .span:hover{
   background-color: var(--Orange);
+  color:var(--Dark-Blue);
 }
 
-article section button{
+article section .button{
   width:100%;
   background-color: var(--Orange);
   margin:20px 0 10px;
@@ -114,4 +117,70 @@ article section button{
 article section button:hover{
   background-color: var(--White);
   color: var(--Orange);
+}
+
+.fullPage{
+  width:100%;
+  height:100vh;
+  position: absolute;
+  display:flex;
+  flex-direction: row;
+  top:0;
+  z-index:3;
+}
+.horizontal{
+  width:20%;
+  height:100vh;
+  background-color: hsl(25, 97%, 53%);
+  backdrop-filter: blur(5px);
+  border-radius: 0;
+  min-height:auto;
+  max-width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:0;
+  padding:0;
+  /* animation: slideIn 3s ease-in; */
+}
+.horizontal h1{
+  position: relative;
+  z-index: 3;
+  background-color: white;
+  padding:10px;
+  color:var(--Very-Dark-Blue);
+}
+.horizontal:first-child{
+  animation: slideIn 1.7s 4s ease-in;
+}
+.horizontal:nth-child(2){
+  animation: slideIn 1.9s 4s ease-in;
+}
+.horizontal:nth-child(3){
+  animation: slideIn 2s 4s ease-in;
+}
+.horizontal:nth-child(4){
+  animation: slideIn 1.9s 4s ease-in;
+}
+.horizontal:last-child{
+  animation: slideIn 1.7s 4s ease-in;
+}
+
+@keyframes slideIn {
+  0%{
+    transform: translateY(0px);
+  }
+  100%{
+    transform: translateY(-700px);
+  }
+}
+
+@media screen and (max-width:500px) {
+  .fullPage{
+    flex-direction: column;
+  }
+  .horizontal{
+    width:100%;
+    height:20vh;
+  }
 }

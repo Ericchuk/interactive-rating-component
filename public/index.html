@@ -40,4 +40,23 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAxSUCMGIeSKaKsdN-9nPTg66_EtATdwYo",
+      authDomain: "simple-rating-card.firebaseapp.com",
+      projectId: "simple-rating-card",
+      storageBucket: "simple-rating-card.appspot.com",
+      messagingSenderId: "517061508972",
+      appId: "1:517061508972:web:f24e787056a8795acc3d49"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
 </html>
